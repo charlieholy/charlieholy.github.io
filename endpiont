@@ -11,6 +11,14 @@ codec:
 ffmpeg codec
 AMC android media codec
 
+1.解码器选择
+ffp->mediacodec_all_videos = 1
+选择amc
+node = ffpipenode_create_video_decoder_from_android_mediacodec(ffp, pipeline, opaque->weak_vout);
+amc找不到合适的解码器选择软解
+if (!node) {
+node = ffpipenode_create_video_decoder_from_ffplay(ffp);
+
 
 int re = avcodec_send_packet(codec, pkt);
 while( avcodec_receive_frame(codec, frame) == 0)
