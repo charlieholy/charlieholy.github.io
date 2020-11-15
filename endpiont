@@ -2,9 +2,17 @@
 vout:
 nativewindow
 opengles
-AMC android media codec
 
 aout:
 opensles
 audiotrace
+
+codec:
+ffmpeg codec
+AMC android media codec
+
+
+int re = avcodec_send_packet(codec, pkt);
+while( avcodec_receive_frame(codec, frame) == 0)
+
 
