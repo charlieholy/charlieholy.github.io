@@ -1,0 +1,10 @@
+
+vout:
+nativewindow
+opengles
+AMC android media codec
+
+aout:
+opensles
+audiotrace
+
