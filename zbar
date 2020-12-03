@@ -1,0 +1,1 @@
+export CFLAGS="-g -O0" ;./configure --prefix=`pwd`/output --disable-video --without-gtk --without-qt
