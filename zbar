@@ -1,1 +1,7 @@
 export CFLAGS="-g -O0" ;./configure --prefix=`pwd`/output --disable-video --without-gtk --without-qt
+
+for python zbar.so
+gcc -shared -fPIC -O zbar.soimagescanner.c zbarmodule.c scanner.c enum.c symboliter.c processor.c exception.c symbol.c image.c symbolset.c decoder.c -l/usr/include/python2
+.7 -lpython2.7 $(pkg-config ..output/lib/pkgconfig/zbar.pc --libs--cflags) -lpng
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sourcecode/zbar-0.10/output/lib
+python -C "import zbar;print(213,zbar.version())"
