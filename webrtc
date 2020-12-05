@@ -4,3 +4,6 @@ netstat -an | findstr 8001
 git config --global http.proxy http://127.0.0.1:8001
 git config --global https.proxy http://127.0.0.1:8001
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+
+apt install openssh-server
+apt install lrzsz
