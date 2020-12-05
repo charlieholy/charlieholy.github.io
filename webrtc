@@ -5,5 +5,10 @@ git config --global http.proxy http://127.0.0.1:8001
 git config --global https.proxy http://127.0.0.1:8001
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 
-apt install openssh-server
-apt install lrzsz
+apt install openssh-server lrzsz curl vim git
+
+alias vi='vim'
+export http_proxy="http://localhost:8001/"
+export https_proxy="http://localhost:8001/"
+export ftp_proxy="http://localhost:8001/"
+export PATH=/opt/depot_tools:$PATH
