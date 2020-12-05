@@ -1,0 +1,6 @@
+
+netstat -an | findstr 1080
+netstat -an | findstr 8001
+git config --global http.proxy http://127.0.0.1:8001
+git config --global https.proxy http://127.0.0.1:8001
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
