@@ -12,3 +12,6 @@ export http_proxy="http://localhost:8001/"
 export https_proxy="http://localhost:8001/"
 export ftp_proxy="http://localhost:8001/"
 export PATH=/opt/depot_tools:$PATH
+
+fetch --nohooks webrtc_android
+gclient sync
