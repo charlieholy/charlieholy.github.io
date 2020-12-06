@@ -15,3 +15,6 @@ export PATH=/opt/depot_tools:$PATH
 
 fetch --nohooks webrtc_android
 gclient sync
+
+cd src
+./build/install-build-deps.sh
