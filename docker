@@ -1,0 +1,4 @@
+brew reinstall docker
+brew cask install docker
+升级了一次mac体统 docker正常了
+docker info | grep -i dir
