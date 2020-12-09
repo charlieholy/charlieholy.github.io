@@ -1,0 +1,22 @@
+globals.read_codec .  codec_interface->interface_name
+
+Audio Codec Compare 
+
+查看codec
+switch_core_session_set_read_codec
+
+pa call sip:8888@120.26.57.115
+
+modload portaudio
+
+load mod_portaudio
+
+originate {absolute_codec_string=PCMA}sofia/external/sip:8888@121.41.75.189 bridge:portaudio/auto_answer inline
+
+
+originate {absolute_codec_string=PCMA}sofia/external/sip:8517@192.168.204.12:55060 bridge:portaudio/auto_answer inline
+
+portaudio 依赖于asla asound
+
+
+originate {absolute_codec_string=PCMA}sofia/external/sip:8888@120.26.57.115:5080 bridge:portaudio/auto_answer inline
