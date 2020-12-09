@@ -32,4 +32,18 @@ apt install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 vncserver -kill :1
 vncserver :1
 
+///////////////////////////////////
+cd /home/kevin/webrtc/linux
+fetch --no-hooks webrtc_android
+gclient sync
+cd src
+git checkout master
 
+git checkout -b 72 refs/remotes/branch-heads/72
+gclient sync
+
+gn gen out/android --args='target_os="android" target_cpu="arm"'
+ninja -C out/android
+
+build/android/gradle/generate_gradle.py --output-directory $PWD/out/android --target "//examples:AppRTCMobile"
+////////////////////////////////////
