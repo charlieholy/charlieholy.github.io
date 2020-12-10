@@ -1,0 +1,2 @@
+originate {origination_caller_id_number=18258251024}sofia/internal/sip:11183@172.25.0.115:5201 8517 XML internal
+bgapi originate {origination_caller_id_number=11185}sofia/external/sip:018258251024@172.25.0.115:5201 TestASR XML internal
