@@ -34,7 +34,7 @@ vncserver :1
 
 ///////////////////////////////////
 cd /home/kevin/webrtc/linux
-fetch --no-hooks webrtc_android
+fetch --nohooks webrtc_android
 gclient sync
 cd src
 git checkout master
