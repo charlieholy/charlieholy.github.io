@@ -1,0 +1,9 @@
+compile ffmpeg with debug info
+
+#!/bin/bash
+./configure \
+    --prefix=`pwd`/output \
+    --enable-debug=3 \
+    --disable-optimizations \
+    --disable-stripping \
+    --disable-x86asm
