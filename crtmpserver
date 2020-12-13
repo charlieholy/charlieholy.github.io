@@ -16,3 +16,8 @@ case4:
 cp trailer.mp4 /mnt/hgfs/ubuntu/resource
 chrome://https://ossrs.net/srs.release/releases/
 rtmp://192.168.1.3/live/mp4:trailer.mp4
+
+case5:
+cp tt.mp3 /mnt/hgfs/ubuntu/resource
+chrome://https://ossrs.net/srs.release/releases/
+rtmp://192.168.0.111/live/mp3:tt
