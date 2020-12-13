@@ -11,3 +11,8 @@ case3:
 crtmpserver/docs/simpleLive/simpleLive.html
 rtmp://192.168.1.3/live/livestream.    [server/app][stream]
 ffplay rtmp://charlieholy/live/livestream
+
+case4:
+cp trailer.mp4 /mnt/hgfs/ubuntu/resource
+chrome://https://ossrs.net/srs.release/releases/
+rtmp://192.168.1.3/live/mp4:trailer.mp4
