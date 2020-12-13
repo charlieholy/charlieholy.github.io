@@ -49,6 +49,7 @@ bool IOBuffer::WriteToTCPFd(int32_t fd, uint32_t size, int32_t &sentAmount) {
     INFO("send [%s]",STR(temp.ToString()));
   ///////
   *(uint8_t(*)[21])pSPS
+  *(char(*)[8])&(pCapabilities->videoCodecId).   == 0,0,0,0,0,'T','P','V'
   ///////////////
   endpoint
   recvAmount = recv(fd, (char *) (_pBuffer + _published), expected, MSG_NOSIGNAL);
