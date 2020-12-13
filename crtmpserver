@@ -29,6 +29,9 @@ bool BaseRTMPProtocol::SignalInputData(IOBuffer &buffer) {
 	if (_enqueueForDelete)
 		return true;
 
-
-    INFO("resv [%s]",STR(IOBuffer::DumpBuffer(buffer._pBuffer,10)));
+	IOBuffer temp;
+	temp.ReadFromBuffer(
+			GETIBPOINTER(buffer),
+			GETAVAILABLEBYTESCOUNT(buffer));
+    INFO("resv [%s]",STR(temp.ToString()));
 //////////////
