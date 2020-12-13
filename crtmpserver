@@ -21,3 +21,14 @@ case5:
 cp tt.mp3 /mnt/hgfs/ubuntu/resource
 chrome://https://ossrs.net/srs.release/releases/
 rtmp://192.168.0.111/live/mp3:tt
+
+
+dumprecv
+//////////
+bool BaseRTMPProtocol::SignalInputData(IOBuffer &buffer) {
+	if (_enqueueForDelete)
+		return true;
+
+
+    INFO("resv [%s]",STR(IOBuffer::DumpBuffer(buffer._pBuffer,10)));
+//////////////
