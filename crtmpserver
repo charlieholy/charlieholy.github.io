@@ -35,3 +35,18 @@ bool BaseRTMPProtocol::SignalInputData(IOBuffer &buffer) {
 			GETAVAILABLEBYTESCOUNT(buffer));
     INFO("resv [%s]",STR(temp.ToString()));
 //////////////
+bool IOBuffer::WriteToTCPFd(int32_t fd, uint32_t size, int32_t &sentAmount) {
+ SANITY_INPUT_BUFFER;
+ bool result = true;
+ if (_sendLimit != 0xffffffff) {
+  size = size > _sendLimit ? _sendLimit : size;
+ }
+
+ IOBuffer temp;
+ temp.ReadFromBuffer(
+   GETIBPOINTER(*this),
+   GETAVAILABLEBYTESCOUNT(*this));
+    INFO("send [%s]",STR(temp.ToString()));
+  ///////
+  *(uint8_t(*)[21])pSPS
+  ///////////////
