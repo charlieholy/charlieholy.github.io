@@ -51,4 +51,6 @@ gn gen out/linux_debug_x64 --args='target_os="linux" target_cpu="x64"'
 ninja -C out/linux_debug_x64 peerconnection_server
 gn gen out/linux_debug_x64 --args='target_os="linux" target_cpu="x64"'
 ninja -C out/linux_debug_x64 peerconnection_client
+gn gen out/xcode_ios_arm64 --args='target_os="ios" target_cpu="arm64"' --ide=xcode
+gn gen out/xcode_ios_arm64 --args='target_os="mac" target_cpu="arm64"' --ide=xcode
 
