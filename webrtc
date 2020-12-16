@@ -47,3 +47,8 @@ ninja -C out/android
 
 build/android/gradle/generate_gradle.py --output-directory $PWD/out/android --target "//examples:AppRTCMobile"
 ////////////////////////////////////
+gn gen out/linux_debug_x64 --args='target_os="linux" target_cpu="x64"'
+ninja -C out/linux_debug_x64 peerconnection_server
+gn gen out/linux_debug_x64 --args='target_os="linux" target_cpu="x64"'
+ninja -C out/linux_debug_x64 peerconnection_client
+
